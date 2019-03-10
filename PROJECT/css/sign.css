@@ -1,0 +1,169 @@
+body{
+	margin:0;
+font-family:"Lato",sans-serif;
+background-color:#cceeff;
+}
+
+.list
+{
+	background-color:black;
+	display:block;
+	font-size: 36px;
+	margin:0px;
+	padding-top:0px;
+	color:#00cc99;
+}
+
+.sidenav {
+	opacity:0.8;
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color:#cceeff;
+  overflow-x: hidden;
+  transition: 0.5s;
+  padding-top: 0px;
+  text-align:center;
+}
+
+.sidenav a {
+  padding:10px;
+  text-decoration: none;
+  font-size: 25px;
+  color: black;
+  display: block;
+  transition: 0.3s;
+
+}
+
+.sidenav a:hover{
+  color: #000000;
+  font-size:40px; 
+}
+
+.sidenav .clsbtn {
+  position: relative;
+  top: 0;
+  left:640px;
+  font-size: 36px;
+  margin-left: 0px;
+}
+
+/*------------------------------------------------------------*/
+/*--------------------SIGN PAGE CSS--------------------------*/
+* {
+	box-sizing: border-box;
+	border-color:black;
+	
+  }
+
+/* Style the input container */
+.input-container {
+  padding-left:10%;
+  margin-left:350px;
+  display: flex;
+  width: 40%;
+  border-radius:4px;
+  margin-bottom: 15px;
+}
+
+/* Style the form icons */
+.icon {
+  padding: 10px;
+  background:#000000;
+  color: white;
+  min-width: 50px;
+  border-radius:4px;
+  text-align: center;
+}
+
+/* Style the input fields */
+.input-field {
+  width: 100%;
+  padding: 10px;
+  border-radius:4px;
+  outline: none;
+}
+
+.input-field:focus {
+  border: 1px solid dodgerblue;
+}
+
+/* Set a style for the submit button */
+.btn {
+  background-color:#000000;
+  color:#cceeff;
+  margin-left:610px;
+  padding: 15px 20px;
+  border: none;
+  border-radius:4px;
+  cursor: pointer;
+  width: 10%;
+  opacity: 0.9;
+}
+
+.btn:hover {
+  opacity: 1;
+}
+
+<!--capcha!-->
+.capbox {
+	background-color: #cceeff;
+	border: #black 0px solid;
+	display: inline-block;
+	*display: inline; zoom: 1; /* FOR IE7-8 */
+	padding: 80px 40px 8px 8px;
+	}
+
+.capbox-inner {
+	font: bold 11px arial, sans-serif;
+	color: #000000;
+	background-color: #cceeff;
+	margin-left:610px;
+	padding:2px;	
+	font-size:12px;
+	-moz-border-radius: 4px;
+	-webkit-border-radius: 4px;
+	border-radius: 4px;
+	}
+
+#CaptchaDiv {
+	font: bold 17px verdana, arial, sans-serif;
+	font-style: italic;
+	color: #cceeff;
+	width:134px;
+	display: inline-block;
+	border: #black 0px solid;
+	border-radius:4px;
+	background-color: #000000;
+	padding: 6px 36px;
+	margin-left:610px;
+	}
+
+#CaptchaInput { margin: 10px 10px 10px 0px; border-radius:4px; width: 135px; }
+
+.pre {
+	float:right;
+	margin:0px;
+	 display: block;
+	padding-right:10px;
+	background-color:#cceeff;
+}
+.pre .close{
+  right: 15%;
+  text-decoration: none;
+  margin:15%;
+  font-size: 36px;
+}
+/*------------------------------------------------------------*/
+/*--------------------SIGN PAGE CSS--------------------------*/
+
+
+@media screen and (max-height: 450px) {
+  .sidenav {padding-top: 20px;}
+  .sidenav a {font-size: 18px;}
+}
+

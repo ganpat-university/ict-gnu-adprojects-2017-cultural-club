@@ -1,0 +1,144 @@
+
+
+	.container .btn1 {
+	  position: absolute;
+	  top: 46%;
+	  left: 20%;
+	  float:left;
+	  transform: translate(-50%, -50%);
+	  -ms-transform: translate(-50%, -50%);
+	  background-color: #555;
+	  color: white;
+	  font-size: 16px;
+	  padding: 12px 24px;
+	  border: none;
+	  cursor: pointer;
+	  border-radius: 5px;
+	  text-align: center;
+	}
+
+	.container .btn1:hover {
+	  background-color: #cceeff;
+	  color:black;
+	}
+	.container .btn2 {
+	  position: absolute;
+	  top: 45.6%;
+	  left: 55%;
+	  transform: translate(-50%, -50%);
+	  -ms-transform: translate(-50%, -50%);
+	  background-color: #555;
+	  color: white;
+	  font-size: 16px;
+	  padding: 12px 24px;
+	  border: none;
+	  cursor: pointer;
+	  border-radius: 5px;
+	  text-align: center;
+	}
+
+	.container .btn2:hover {
+	  background-color: #cceeff;
+	  color:black;
+	}
+	.container .btn3 {
+	  position: absolute;
+	  top: 46%;
+	  left: 86%;
+	  transform: translate(-50%, -50%);
+	  -ms-transform: translate(-50%, -50%);
+	  background-color: #555;
+	  color: white;
+	  font-size: 16px;
+	  padding: 12px 24px;
+	  border: none;
+	  cursor: pointer;
+	  border-radius: 5px;
+	  text-align: center;
+	}
+
+	.container .btn3:hover {
+	  background-color: #cceeff;
+	  color:black;
+	}
+	
+	.container .btn4 {
+	  position: absolute;
+	  top: 91%;
+	  left: 20%;
+	  transform: translate(-50%, -50%);
+	  -ms-transform: translate(-50%, -50%);
+	  background-color: #555;
+	  color: white;
+	  font-size: 16px;
+	  padding: 12px 24px;
+	  border: none;
+	  cursor: pointer;
+	  border-radius: 5px;
+	  text-align: center;
+	}
+
+	.container .btn4:hover {
+	  background-color: #cceeff;
+	  color:black;
+	}
+	.container .btn5 {
+	  position: absolute;
+	  top: 90.6%;
+	  left: 55%;
+	  transform: translate(-50%, -50%);
+	  -ms-transform: translate(-50%, -50%);
+	  background-color: #555;
+	  color: white;
+	  font-size: 16px;
+	  padding: 12px 24px;
+	  border: none;
+	  cursor: pointer;
+	  border-radius: 5px;
+	  text-align: center;
+	}
+
+	.container .btn5:hover {
+	  background-color: #cceeff;
+	  color:black;
+	}
+	.container .btn6 {
+	  position: absolute;
+	  top: 91%;
+	  left: 86%;
+	  transform: translate(-50%, -50%);
+	  -ms-transform: translate(-50%, -50%);
+	  background-color: #555;
+	  color: white;
+	  font-size: 16px;
+	  padding: 12px 24px;
+	  border: none;
+	  cursor: pointer;
+	  border-radius: 5px;
+	  text-align: center;
+	}
+
+	.container .btn6:hover {
+	  background-color: #cceeff;
+	  color:black;
+	}
+	
+	.pre {
+	float:right;
+	margin:0px;
+	 display: block;
+	padding-right:10px;
+	background-color:#cceeff;
+}
+.pre .close{
+  right: 15%;
+  text-decoration: none;
+  margin:15%;
+  font-size: 36px;
+}
+
+
+	@media screen and (max-height: 450px) {
+	  .sidenav {padding-top: 20px;}
+	  .sidenav a {font-size: 18px;}
+	}
