@@ -25,7 +25,7 @@
 		<div class="row">
 			<div class="column-66">
 			  <p>Cultural Club is a community that connects culturally minded colleges.Our events are intended to bring together art,music,and film aficionados of diverse nationalities at inspiring events in the colleges.</p>
-			  <button class="button">Download Application</button>
+			  <button class="button">join here</button>
 			</div>
 		</div>
 	</div>
