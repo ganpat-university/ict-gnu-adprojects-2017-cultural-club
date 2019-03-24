@@ -56,12 +56,12 @@
 
                                     <div class="col-sm-6" style="">
                                         <span style="font-size: 16px; padding-bottom: 15px;">Email ID*</span>
-                                        <input type="email" class="form-control s-form-v4__input g-padding-l-0--xs" name="email" placeholder="* Your Email" value="" required="" >
+                                        <input type="email" class="form-control s-form-v4__input g-padding-l-0--xs" name="email" placeholder="* Your Email" value="" required pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$" >
                                     </div>
 									
 									<div class="col-sm-6" style="">
                                         <span style="font-size: 16px; padding-bottom: 15px;">Enrollment*</span>
-                                        <input type="number" class="form-control s-form-v4__input g-padding-l-0--xs" name="enroll" placeholder="* Your Enrollment" value="" required="" >
+                                        <input type="number" class="form-control s-form-v4__input g-padding-l-0--xs" name="enroll" placeholder="* Your Enrollment" value="" required pattern="[0-9]{11}" >
                                     </div>
                                 </div>
 								
