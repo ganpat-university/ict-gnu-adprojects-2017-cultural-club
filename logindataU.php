@@ -60,8 +60,8 @@
 	}
 	if(isset($_POST['submit'])){
 		//echo '<script>alert("in script")</script>';
-		//ConnectData();
-		InsertMsg();
+		ConnectData();
+		//InsertMsg();
 	}
 	
 	function UpdateData()
@@ -73,12 +73,13 @@
 		$mname=$_POST['mname'];
 		$lname=$_POST['lname'];
 		$bdate=$_POST['birthdate'];
-		$semester=$_POST['semester'];
-		$branch=$_POST['branch'];
+		$semester=$_SESSION['seme'];
+		$branch=$_SESSION['bran'];
 		$number=$_POST['no'];
-		$email=$_POST['email'];
+		$email=$_SESSION['email'];
 		$pass=$_POST['pass'];
-		$id=$_SESSION['enroll'];
+		$id=$_SESSION['enroll']
+		;
 		/*echo $fname."<br>".$mname."<br>".$lname."<br>".$bdate."<br>".$number."<br>".$email."<br>".
 		$address."<br>".$since."<br>".$idate."<br>".$regnumber."<br>".$pass."<br>".$type;*/
 
@@ -88,9 +89,17 @@
 
 		if($res=mysqli_query($conn,$query))
 		{
+			
+				$_SESSION['pass'] = $pass;
+				$_SESSION['fname']=$fname;
+				$_SESSION['mname']=$mname;
+				$_SESSION['lname']=$lname;
+				$_SESSION['dt']=$bdate;
+				$_SESSION['mob']=$number;
+				
 		echo('<script>
 			   window.alert("Your Data Updated Sucessfully");
-			   window.location="login.php";
+			   window.location="Profile.php";
 			   </script>');
 		}
 		else
@@ -123,103 +132,54 @@
 		$bn=$_POST['branch'];
 		/*echo $fname."<br>".$mname."<br>".$lname."<br>".$bdate."<br>".$number."<br>".$email."<br>".
 		$address."<br>".$since."<br>".$idate."<br>".$regnumber."<br>".$pass."<br>".$type;*/
-		$sql="SELECT * FROM login where Email='$email'";
+		$sql="SELECT * FROM login where  Enrollment='$enroll'";
 			$res1=mysqli_query($conn,$sql);
 			$result=mysqli_num_rows($res1);
-
 			if($result>0)
 			{
-				
 				echo('<script>
-				   window.alert("This Email Already Exist! Please Enter New Email");
+				   window.alert("This  Enrollment Already Exist! Please Enter New Email");
 				   window.location="UserRegistration.php";
 				   </script>');
 			}
 			else
 			{
-		$query="insert into login(FirstName,MiddleName,LastName,Email,Enrollment,Password,Mobile,BirthDate,Semester,Branch) values('$fname','$mname','$lname','$email','$enroll','$pass','$number','$bdate','$semester','$bn')";
-
-		if($res=mysqli_query($conn,$query))
-		{
-		echo('<script>
-			   window.alert("Your Data Inserted Sucessfully");
-			   window.location="login.php";
-			   </script>');
-		}
-		else
-		{
-			echo('<script>
-				   window.alert("Not Done, Try after some time");
-				   window.location="login.php";
-				   </script>');
-		} 
-	}
-	}
-	function InsertMsg()
-	{
-			require 'PHPMailer-master/src/Exception.php';
-			require 'PHPMailer-master/src/PHPMailer.php';
-			require 'PHPMailer-master/src/SMTP.php';
-			// require 'vendor/autoload.php';
-
-			$mail = new PHPMailer\PHPMailer\PHPMailer(true);                              // Passing `true` enables exceptions
-			try {
-				//Server settings
-				$mail->SMTPDebug = 0;                                 // Enable verbose debug output
-				$mail->isSMTP();        
-				$mail->SMTPKeepAlive = true;   
-				$mail->Mailer ="smtp";                               // Set mailer to use SMTP
-				$mail->Host = 'smtp.gmail.com';  // Specify main and backup SMTP servers
-				$mail->SMTPAuth = true;                               // Enable SMTP authentication
-				$mail->Username = "patelvaghesh2313@gmail.com";                 // SMTP username
-				$mail->Password = "347676747926vir";                           // SMTP password
-				$mail->SMTPSecure = 'tls';                            // Enable TLS encryption, `ssl` also accepted
-				$mail->Port = 587;                                    // TCP port to connect to
-
-				$pemail=$_GET['pemail'];
-
-				// prepare email message
-				$email_message = "<b>Random Code details below.</b>\n\n"."<br>"."<br>";
-
-				function clean_string($string)
+				$sql1="SELECT * FROM login where  Email='$email'";
+				$res11=mysqli_query($conn,$sql1);
+				$result1=mysqli_num_rows($res11);
+				if($result1>0)
 				{
-					$bad = array("content-type", "bcc:", "to:", "cc:", "href");
-					return str_replace($bad, "", $string);
-				}
-
-				/*$email_message = new Mail_mime();*/
-				$email_message .= "<b>sne send mail to vaghesh : </b>Your data Sucessfully register<br>"."<br>";
-				
-
-				$receive='snepatel2000@gmail.com';
-				//Recipients
-				$mail->setFrom('patelvaghesh2313@gmail.com', 'Mailer');
-				$mail->addAddress($receive);     // Add a recipient
-				
-				
-				$subject="Code Details";
-				//Content
-				$mail->isHTML(true);                                  // Set email format to HTML
-				$mail->Subject = $subject;
-				$mail->Body    = $email_message;
-				
-
-				$mail->send();
-
-				echo('<script>window.alert("Your Data Submited Sucessfully");
-				   window.location="index.php";
+					echo('<script>
+				   window.alert("This Email  Already Exist! Please Enter New Email");
+				   window.location="UserRegistration.php";
 				   </script>');
-
-			} catch (Exception $e) {
-				echo 'Message could not be sent. Mailer Error: ', $mail->ErrorInfo;
-				
-			}
-
+				}
+				else{
+					
+					$query="insert into login(FirstName,MiddleName,LastName,Email,Enrollment,Password,Mobile,BirthDate,Semester,Branch) values('$fname','$mname','$lname','$email','$enroll','$pass','$number','$bdate','$semester','$bn')";
+					if($res=mysqli_query($conn,$query))
+					{
+					echo('<script>
+						   window.alert("Your Data Inserted Sucessfully");
+						   window.location="login.php";
+						   </script>');
+					}
+					else
+					{
+						echo('<script>
+							   window.alert("Not Done, Try after some time");
+							   window.location="login.php";
+							   </script>');
+					} 
+				}
+		
 	}
+	}
+	
 	if(isset($_POST['submit2'])){
 		//echo '<script>alert("in script")</script>';
-		//InsertData();
-		InsertMsg();
+		InsertData();
+		//InsertMsg();
 	}
 	
 	function ForgotPassword()
@@ -269,12 +229,12 @@
 	{
 			session_start();
 			include 'config.php';
-			$enroll=$_POST['enroll'];
-			$mname=$_POST['mname'];
-			$branch=$_POST['branch'];
-			$seme=$_POST['semester'];
-			$no=$_POST['no'];
-			$email=$_POST['email'];
+			$enroll=$_SESSION['enroll'];
+			$mname=$_SESSION['mname'];
+			$branch=$_SESSION['bran'];
+			$seme=$_SESSION['seme'];
+			$no=$_SESSION['mob'];
+			$email=$_SESSION['email'];
 			$sevent=$_POST['sevent'];
 			$cevent=$_POST['cevent'];
 
