@@ -122,8 +122,8 @@
                                 <div class="row" >
                                 <div class="g-text-center--xs col-sm-3" ></div>
                                 <div class="g-text-center--xs col-sm-6" >
-                                    <button  type="submit" name="submit2" class="text-uppercase s-btn s-btn--md s-btn--primary-bg g-radius--50 g-padding-x-70--xs g-margin-b-20--xs" >Insert</button>
-                                    <a href="login.php" class="text-uppercase s-btn s-btn--md s-btn--primary-bg g-radius--50 g-padding-x-70--xs g-margin-b-20--xs">Cancel</a>
+                                    <button  type="submit" name="submit2" class="text-uppercase s-btn s-btn--md s-btn--primary-bg g-radius--50 g-padding-x-70--xs g-margin-b-20--xs" >SUBMIT</button>
+                                    <a href="login.php" class="text-uppercase s-btn s-btn--md s-btn--primary-bg g-radius--50 g-padding-x-70--xs g-margin-b-20--xs">CANCEL</a>
                                 </div>
                                 </div>
                                     
