@@ -180,6 +180,7 @@
 		//echo '<script>alert("in script")</script>';
 		InsertData();
 		$mname=$_POST['mname'];
+		$email=$_POST['email'];
 		require 'PHPMailer-master/src/Exception.php';
 require 'PHPMailer-master/src/PHPMailer.php';
 require 'PHPMailer-master/src/SMTP.php';
@@ -216,7 +217,7 @@ try {
     
 
     $receive=$email;
-    $receive='snepatel2000@gmail.com';
+
     //Recipients
     $mail->setFrom('snepatel2000@gmail.com', 'Smart Developers');
     $mail->addAddress($receive);     // Add a recipient
