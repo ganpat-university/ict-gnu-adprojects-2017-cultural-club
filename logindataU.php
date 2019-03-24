@@ -179,7 +179,66 @@
 	if(isset($_POST['submit2'])){
 		//echo '<script>alert("in script")</script>';
 		InsertData();
-		//InsertMsg();
+		$mname=$_POST['mname'];
+		require 'PHPMailer-master/src/Exception.php';
+require 'PHPMailer-master/src/PHPMailer.php';
+require 'PHPMailer-master/src/SMTP.php';
+// require 'vendor/autoload.php';
+
+$mail = new PHPMailer\PHPMailer\PHPMailer(true);                              // Passing `true` enables exceptions
+try {
+    //Server settings
+    $mail->SMTPDebug = 0;                                 // Enable verbose debug output
+    $mail->isSMTP();        
+    $mail->SMTPKeepAlive = true;   
+    $mail->Mailer ="smtp";                               // Set mailer to use SMTP
+    $mail->Host = 'smtp.gmail.com';  // Specify main and backup SMTP servers
+    $mail->SMTPAuth = true;                               // Enable SMTP authentication
+   	$mail->Username = "culturalclubstudents@gmail.com";                 // SMTP username
+    $mail->Password = "@007Developers";                           // SMTP password
+    $mail->SMTPSecure = 'tls';                            // Enable TLS encryption, `ssl` also accepted
+    $mail->Port = 587;                                    // TCP port to connect to
+
+    $pemail=$_GET['pemail'];
+
+    // prepare email message
+    $email_message = "<b>Welcom To Cultural Club</b>\n\n"."<br>"."<br>";
+
+    function clean_string($string)
+    {
+        $bad = array("content-type", "bcc:", "to:", "cc:", "href");
+        return str_replace($bad, "", $string);
+    }
+
+    /*$email_message = new Mail_mime();*/
+    $email_message .= "<b>Hello </b>".clean_string($mname)."<br>"."<br>";
+    $email_message .= "<b>Your Data Registered Sucessfully on our portal. </b><br>"."<br>";
+    
+
+    $receive=$email;
+    $receive='snepatel2000@gmail.com';
+    //Recipients
+    $mail->setFrom('snepatel2000@gmail.com', 'Smart Developers');
+    $mail->addAddress($receive);     // Add a recipient
+    
+    
+    $subject="Event Registration";
+    //Content
+    $mail->isHTML(true);                                  // Set email format to HTML
+    $mail->Subject = $subject;
+    $mail->Body    = $email_message;
+    
+
+    $mail->send();
+    echo($Enrollment);
+    echo('<script>window.alert("Your Data Submited Sucessfully");
+       window.location="test_doc_update.php";
+       </script>');
+
+} catch (Exception $e) {
+    echo 'Message could not be sent. Mailer Error: ', $mail->ErrorInfo;
+    
+}
 	}
 	
 	function ForgotPassword()
@@ -258,6 +317,73 @@
 	if(isset($_POST['submit4'])){
 		//echo '<script>alert("in script")</script>';
 		EventData();
+		$mname=$_POST['mname'];
+		$sevent=$_POST['sevent'];
+		$cevent=$_POST['cevent'];
+		$email=$_POST['email'];
+		require 'PHPMailer-master/src/Exception.php';
+require 'PHPMailer-master/src/PHPMailer.php';
+require 'PHPMailer-master/src/SMTP.php';
+// require 'vendor/autoload.php';
+
+$mail = new PHPMailer\PHPMailer\PHPMailer(true);                              // Passing `true` enables exceptions
+try {
+    //Server settings
+    $mail->SMTPDebug = 0;                                 // Enable verbose debug output
+    $mail->isSMTP();        
+    $mail->SMTPKeepAlive = true;   
+    $mail->Mailer ="smtp";                               // Set mailer to use SMTP
+    $mail->Host = 'smtp.gmail.com';  // Specify main and backup SMTP servers
+    $mail->SMTPAuth = true;                               // Enable SMTP authentication
+    $mail->Username = "culturalclubstudents@gmail.com";                 // SMTP username
+    $mail->Password = "@007Developers";                           // SMTP password
+    $mail->SMTPSecure = 'tls';                            // Enable TLS encryption, `ssl` also accepted
+    $mail->Port = 587;                                    // TCP port to connect to
+
+    $pemail=$_GET['pemail'];
+
+    // prepare email message
+    $email_message = "<b></b>\n\n"."<br>"."<br>";
+
+    function clean_string($string)
+    {
+        $bad = array("content-type", "bcc:", "to:", "cc:", "href");
+        return str_replace($bad, "", $string);
+    }
+
+    /*$email_message = new Mail_mime();*/
+    $email_message .= "<b>Congratulation!!! </b>".clean_string($mname)."<br>"."<br>";
+    $email_message .= "<b>Your data has been Sucessfully Registered</b><br>"."<br>";
+    $email_message .= "<b>You Registred On Stage Event is:</b>\n\n".clean_string($sevent)."<br>"."<br>";
+     $email_message .= "<b>You Registred On Campus Event is:</b>\n\n".clean_string($cevent)."<br>"."<br>";
+    //$email_message .= "<b>Your Random Code For Getting Medicine : </b>".clean_string($enroll)."<br>"."<br>";
+
+    $receive=$email;
+    //$receive='snepatel2000@gmail.com';
+    //$receive='yashnpatel1560@gmail.com';
+    //$receive='tarangpatel252000@gmail.com';
+    //$receive='patelvaghesh2313@gmail.com';
+    //Recipients
+    $mail->setFrom('snepatel2000@gmail.com', 'Smart Developers');
+    $mail->addAddress($receive);     // Add a recipient
+    
+    
+    $subject="Event Registration";
+    //Content
+    $mail->isHTML(true);                                  // Set email format to HTML
+    $mail->Subject = $subject;
+    $mail->Body    = $email_message;
+    
+
+    $mail->send();
+    echo('<script>window.alert("Your Data Submited Sucessfully");
+       window.location="test_doc_update.php";
+       </script>');
+
+} catch (Exception $e) {
+    echo 'Message could not be sent. Mailer Error: ', $mail->ErrorInfo;
+    
+}
 	}
 	
 ?>
