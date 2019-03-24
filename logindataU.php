@@ -223,7 +223,7 @@ try {
     $mail->addAddress($receive);     // Add a recipient
     
     
-    $subject="Event Registration";
+    $subject="New User Registration";
     //Content
     $mail->isHTML(true);                                  // Set email format to HTML
     $mail->Subject = $subject;
