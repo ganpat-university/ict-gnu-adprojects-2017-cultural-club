@@ -57,45 +57,13 @@ session_start();
                     <!-- <div class="col-md-8 js__form-eqaul-height-v1"> -->
                         <div class="g-padding-x-40--xs g-padding-y-50--xs">
                             <h2 class="g-font-size-24--xs g-color--primary g-margin-b-50--xs">Event Registration</h2>
-                            <form id="ajax-contact" action="logindataU.php" class="form-group" name="sentMessage" method="post" enctype="multipart/form-data">
-							<div class="row g-margin-b-30--xs g-margin-b-50--md">
-                                    <div class="col-sm-6" >
-										 <span style="font-size: 16px; padding-bottom: 15px;"
-                                        >*Enrollment Number</span>
-                                        <input type="text" class="form-control s-form-v4__input g-padding-l-0--xs" name="enroll" value="<?php echo $enroll; ?>" placeholder="* Your Enrollment Number" required="">
-                                    </div>
-                                    <div class="col-sm-6" >
-									 <span style="font-size: 16px; padding-bottom: 15px;"
-                                        >*Name</span>
-                                        <input type="text" class="form-control s-form-v4__input g-padding-l-0--xs" name="mname"  value="<?php echo $mnam; ?>" placeholder="* Your Name" required="">
-                                    </div>
-                            </div>
+							<h5 class="g-font-size-15--xs g-color--red g-margin-b-30--xs">1)Enrollment&nbsp&asymp;&asymp;&nbsp<?php echo $enroll; ?>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp 2)Email-<?php echo $emai; ?></h5>
+                            <h5 class="g-font-size-15--xs g-color--red g-margin-b-30--xs">3)Name-<?php echo $mnam; ?>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp 4)Mobile-<?php echo $mo; ?></h5>
+							<h5 class="g-font-size-15--xs g-color--red g-margin-b-30--xs">5)Semester-<?php echo $sem; ?>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp 6)Branch-<?php echo $br; ?></h5>
+							<form id="ajax-contact" action="logindataU.php" class="form-group" name="sentMessage" method="post" enctype="multipart/form-data">
+							
 
-                                <div class="row g-margin-b-30--xs g-margin-b-50--md">    
-                                    
-                                    <div class="col-sm-6" >
-                                        <span style="font-size: 16px; padding-bottom: 15px;">Branch*</span>
-                                        <input type="text" class="form-control s-form-v4__input g-padding-l-0--xs" name="branch" placeholder="* Your Branch" value="<?php echo $br; ?>" required="">
-                                    </div>
-                                    <div class="col-sm-6">
-                                        <span style="font-size: 16px; padding-bottom: 15px;">Semester(1 to 8)*</span>
-                                        <input type="" class="form-control s-form-v4__input g-padding-l-0--xs" name="semester" placeholder="* Your Semester" value="<?php echo $sem; ?>" required="">
-                                    </div>
-                                </div>
-									
-								 <div class="row g-margin-b-30--xs g-margin-b-50--md">    
-									
-									<div class="col-sm-6" >
-									 <span style="font-size: 16px; padding-bottom: 15px;"
-                                        >*Email</span>
-                                        <input type="email" class="form-control s-form-v4__input g-padding-l-0--xs" name="email" value="<?php echo $emai; ?>" placeholder="* Your Email" required="" >
-                                    </div>
-									<div class="col-sm-6">
-									 <span style="font-size: 16px; padding-bottom: 15px;"
-                                        >*Mobile Number</span>
-										<input type="text" class="form-control s-form-v4__input g-padding-l-0--xs" name="no" value="<?php echo $mo; ?>" placeholder="* Your Mobile Number" required="" >
-									</div>
-                                </div>
+                                
                                 
                                  <div class="row g-margin-b-30--xs g-margin-b-50--md">    
                                     
@@ -117,11 +85,10 @@ session_start();
                                     <div class="col-sm-6">
                                         <span style="font-size: 16px; padding-bottom: 15px;">*On Campus Events</span><br/>
 										<select name="cevent" class="form-control s-form-v4__input g-padding-l-0--xs" required="">
-											<option value="Food Chaos" name="e9">Food Chaos</option>
-                                            <option value="Marketing" name="e10">Marketing</option>
-                                            <option value="Bollywood Quiz" name="e11">Bollywood Quiz</option>
-					<option value="1 Min Game" name="e12">1 Min Game</option>
-											<option value="None" name="e13">None</option>
+											<option value="Group Dance" name="e9">Group Dance</option>
+                                            <option value="Group Singing" name="e10">Group Singing</option>
+                                            <option value="Group Drama" name="e11">Group Drama</option>
+											<option value="None" name="e12">None</option>
                 						</select>
                                     </div>
                                 </div>
