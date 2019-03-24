@@ -53,17 +53,17 @@
                                 <div class="row g-margin-b-30--xs g-margin-b-50--md">
                                     <div class="col-sm-4" >
                                         <span style="font-size: 16px; padding-bottom: 15px;">FirstName*</span>
-                                        <input type="text" class="form-control s-form-v4__input g-padding-l-0--xs" name="fname" placeholder="* Your FirstName" value="" required="">
+                                        <input type="text" class="form-control s-form-v4__input g-padding-l-0--xs" name="fname" placeholder="* Your FirstName" value="" required pattern="[A-Za-z]{2,}">
                                     </div>
 
                                     <div class="col-sm-4">
                                         <span style="font-size: 16px; padding-bottom: 15px;">MiddleName*</span>
-                                        <input type="text" class="form-control s-form-v4__input g-padding-l-0--xs" name="mname" placeholder="* Your MiddleName" value="" required="" >
+                                        <input type="text" class="form-control s-form-v4__input g-padding-l-0--xs" name="mname" placeholder="* Your MiddleName" value="" required pattern="[A-Za-z]{2,}" >
                                     </div>
 
                                     <div class="col-sm-4" style="">
                                         <span style="font-size: 16px; padding-bottom: 15px;">LastName*</span>
-                                        <input type="text" class="form-control s-form-v4__input g-padding-l-0--xs" name="lname" placeholder="* Your LastName" value="" required="" >
+                                        <input type="text" class="form-control s-form-v4__input g-padding-l-0--xs" name="lname" placeholder="* Your LastName" value="" required pattern="[A-Za-z]{2,}" >
                                     </div>
                                 </div>
 
@@ -74,7 +74,7 @@
                                     </div>
 									<div class="col-sm-6" >
                                         <span style="font-size: 16px; padding-bottom: 15px;">Semester(1 to 8)*</span>
-                                        <input type="text" class="form-control s-form-v4__input g-padding-l-0--xs" name="semester" placeholder="* Your Semester" value="" required="">
+                                        <input type="text" class="form-control s-form-v4__input g-padding-l-0--xs" name="semester" placeholder="* Your Semester" value="" required pattern="[0-9]{1}">
                                     </div>
                                 </div>
 								
@@ -83,20 +83,20 @@
                                 <div class="row g-margin-b-30--xs g-margin-b-50--md">    
                                     <div class="col-sm-6">
                                         <span style="font-size: 16px; padding-bottom: 15px;">Mobile Number*</span>
-                                        <input type="text" class="form-control s-form-v4__input g-padding-l-0--xs" name="no" placeholder="* Your Mobile Number" value="" required="" >
+                                        <input type="text" class="form-control s-form-v4__input g-padding-l-0--xs" name="no" placeholder="* Your Mobile Number" value="" required pattern="[0-9]{10}" >
                                     </div>
 
                                     <div class="col-sm-6" style="">
                                         <span style="font-size: 16px; padding-bottom: 15px;"
                                         >Email ID*</span>
-                                        <input type="email" class="form-control s-form-v4__input g-padding-l-0--xs" name="email" placeholder="* Your Email" value="" required="" >
+                                        <input type="email" class="form-control s-form-v4__input g-padding-l-0--xs" name="email" placeholder="* Your Email" value="" required pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$" >
                                     </div>
 									
 									<div class="col-sm-6" style="">
 									<br>
                                         <span style="font-size: 16px; padding-bottom: 15px;"
                                         >Enrollment*</span>
-                                        <input type="number" class="form-control s-form-v4__input g-padding-l-0--xs" name="enroll" placeholder="* Your Enrollment" value="" required="" >
+                                        <input type="number" class="form-control s-form-v4__input g-padding-l-0--xs" name="enroll" placeholder="* Your Enrollment" value="" required pattern="[0-9]{11}" >
                                     </div>
 									
 									<div class="col-sm-6" style="">
