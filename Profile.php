@@ -62,6 +62,7 @@
                     <!-- <div class="col-md-8 js__form-eqaul-height-v1"> -->
                         <div class="g-padding-x-40--xs g-padding-y-50--xs">
                             <h2 class="g-font-size-24--xs g-color--primary g-margin-b-50--xs">View Profile</h2>
+							<h5 class="g-font-size-15--xs g-color--red g-margin-b-30--xs">Enrollment-<?php echo $enroll; ?>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp Email-<?php echo $emai; ?></h5>
                             <form id="ajax-contact" action="logindataU.php" class="form-group" name="sentMessage" method="post" enctype="multipart/form-data">
                                 <div class="row g-margin-b-30--xs g-margin-b-50--md">
                                     <div class="col-sm-4" >
@@ -85,39 +86,20 @@
                                         <span style="font-size: 16px; padding-bottom: 15px;">Birthdate (yyyy/mm/dd)*</span>
                                         <input type="text" class="form-control s-form-v4__input g-padding-l-0--xs" name="birthdate" placeholder="* Your Birthdate" value="<?php echo $date; ?>" required="">
                                     </div>
-                                </div>
-								
-								<div class="row g-margin-b-30--xs g-margin-b-50--md">
-                                    <div class="col-sm-6" >
-                                        <span style="font-size: 16px; padding-bottom: 15px;">Semester(1 to 8)*</span>
-                                        <input type="text" class="form-control s-form-v4__input g-padding-l-0--xs" name="semester" placeholder="* Your Semester" value="<?php echo $sem; ?>" required="">
-                                    </div>
-									<div class="col-sm-6" >
-                                        <span style="font-size: 16px; padding-bottom: 15px;">Branch*</span>
-                                        <input type="text" class="form-control s-form-v4__input g-padding-l-0--xs" name="branch" placeholder="* Your Branch" value="<?php echo $br; ?>" required="">
-                                    </div>
-                                </div>
-								
-                                <div class="row g-margin-b-30--xs g-margin-b-50--md">    
-                                    <div class="col-sm-6">
+									<div class="col-sm-6">
                                         <span style="font-size: 16px; padding-bottom: 15px;">Mobile Number*</span>
                                         <input type="text" class="form-control s-form-v4__input g-padding-l-0--xs" name="no" placeholder="* Your Mobile Number" value="<?php echo $mo; ?>" required="" >
-                                    </div>
-
-                                    <div class="col-sm-6" style="">
-                                        <span style="font-size: 16px; padding-bottom: 15px;"
-                                        >Email ID*</span>
-                                        <input type="email" class="form-control s-form-v4__input g-padding-l-0--xs" name="email" placeholder="* Your Email" value="<?php echo $emai; ?>" required="" >
-                                    </div>
+                                    </div>  
                                 </div>
 								
+								
+							                                                 
                                 <div class="g-margin-b-50--xs">
                                     <span style="font-size: 16px; padding-bottom: 15px;"
                                         >Password*</span>
                                     <input type="text" class="form-control s-form-v4__input g-padding-l-0--xs" name="pass" placeholder="* Password" 
                                     value="<?php echo $passw; ?>" required="" >
                                 </div>
-                                
                                 <div class="row" >
                                 <div class="g-text-center--xs col-sm-3" ></div>
                                 <div class="g-text-center--xs col-sm-6" >
