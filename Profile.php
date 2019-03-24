@@ -67,17 +67,17 @@
                                 <div class="row g-margin-b-30--xs g-margin-b-50--md">
                                     <div class="col-sm-4" >
                                         <span style="font-size: 16px; padding-bottom: 15px;">FirstName*</span>
-                                        <input type="text" class="form-control s-form-v4__input g-padding-l-0--xs" name="fname" placeholder="* Your FirstName" value="<?php echo $fnam; ?>" required="">
+                                        <input type="text" class="form-control s-form-v4__input g-padding-l-0--xs" name="fname" placeholder="* Your FirstName" value="<?php echo $fnam; ?>" required pattern="[A-Za-z]{2,}">
                                     </div>
 
                                     <div class="col-sm-4">
                                         <span style="font-size: 16px; padding-bottom: 15px;">MiddleName*</span>
-                                        <input type="text" class="form-control s-form-v4__input g-padding-l-0--xs" name="mname" placeholder="* Your MiddleName" value="<?php echo $mnam; ?>" required="" >
+                                        <input type="text" class="form-control s-form-v4__input g-padding-l-0--xs" name="mname" placeholder="* Your MiddleName" value="<?php echo $mnam; ?>" required pattern="[A-Za-z]{2,}" >
                                     </div>
 
                                     <div class="col-sm-4" style="">
                                         <span style="font-size: 16px; padding-bottom: 15px;">LastName*</span>
-                                        <input type="text" class="form-control s-form-v4__input g-padding-l-0--xs" name="lname" placeholder="* Your LastName" value="<?php echo $lnam; ?>" required="" >
+                                        <input type="text" class="form-control s-form-v4__input g-padding-l-0--xs" name="lname" placeholder="* Your LastName" value="<?php echo $lnam; ?>" required pattern="[A-Za-z]{2,}" >
                                     </div>
                                 </div>
 
