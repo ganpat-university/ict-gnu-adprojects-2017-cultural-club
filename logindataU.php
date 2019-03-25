@@ -318,7 +318,7 @@ try {
 	if(isset($_POST['submit4'])){
 		//echo '<script>alert("in script")</script>';
 		EventData();
-		$mname=$_POST['mname'];
+		$fname=$_POST['fname'];
 		$sevent=$_POST['sevent'];
 		$cevent=$_POST['cevent'];
 		$email=$_POST['email'];
@@ -353,7 +353,7 @@ try {
     }
 
     /*$email_message = new Mail_mime();*/
-    $email_message .= "<b>Congratulation!!! </b>".clean_string($mname)."<br>"."<br>";
+    $email_message .= "<b>Congratulation!!! </b>".clean_string($fname)."<br>"."<br>";
     $email_message .= "<b>Your data has been Sucessfully Registered</b><br>"."<br>";
     $email_message .= "<b>You Registred On Stage Event is:</b>\n\n".clean_string($sevent)."<br>"."<br>";
      $email_message .= "<b>You Registred On Campus Event is:</b>\n\n".clean_string($cevent)."<br>"."<br>";
