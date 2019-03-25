@@ -179,7 +179,7 @@
 	if(isset($_POST['submit2'])){
 		//echo '<script>alert("in script")</script>';
 		InsertData();
-		$mname=$_POST['mname'];
+		$fname=$_POST['fname'];
 		$email=$_POST['email'];
 		require 'PHPMailer-master/src/Exception.php';
 require 'PHPMailer-master/src/PHPMailer.php';
@@ -212,7 +212,7 @@ try {
     }
 
     /*$email_message = new Mail_mime();*/
-    $email_message .= "<b>Hello </b>".clean_string($mname)."<br>"."<br>";
+    $email_message .= "<b>Hello </b>".clean_string($fname)."<br>"."<br>";
     $email_message .= "<b>Your Data Registered Sucessfully on our portal. </b><br>"."<br>";
     
 
