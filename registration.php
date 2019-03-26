@@ -85,10 +85,10 @@ session_start();
                                     <div class="col-sm-6">
                                         <span style="font-size: 16px; padding-bottom: 15px;">*On Campus Events</span><br/>
 										<select name="cevent" class="form-control s-form-v4__input g-padding-l-0--xs" required="">
-											<option value="Group Dance" name="e9">Group Dance</option>
-                                            <option value="Group Singing" name="e10">Group Singing</option>
-                                            <option value="Group Drama" name="e11">Group Drama</option>
-											<option value="None" name="e12">None</option>
+											<option value="Group Dance" name="e9">Food Chasco</option>
+                                            <option value="Group Singing" name="e10">1 Min Game</option>
+                                            <option value="Group Drama" name="e11">Bollywood Quiz</option>
+											<option value="None" name="e12">Series Quiz</option>
                 						</select>
                                     </div>
                                 </div>
