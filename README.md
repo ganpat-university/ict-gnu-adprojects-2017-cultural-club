@@ -1,2 +1,0 @@
-# Culture-Club
-College Project
